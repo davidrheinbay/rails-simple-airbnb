@@ -7,7 +7,7 @@
       <li class="list-inline-item">
       <div class="card margin-top" style="width: 18rem;">
         <img src="https://picsum.photos/200/100/?random" alt="" class="card-img-top">
-        <div class="card-body grey-background">
+        <div class="card-body grey-background text-left">
           <h5 class="card-title"><%= flat.name %></h1>
           <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h3>
           <div class="list-inline">
@@ -17,8 +17,10 @@
             <div class="list-inline-item card-text"><%= flat.price_per_night %></div>
           </div>
         </div>
-        <div class="card-body">
-          <%= link_to "More Info", flat_path(flat) %>
+        <div class="card-body d-flex justify-content-around">
+          <%= link_to "More Info", flat_path(flat), class: "bold yellow" %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "bold"  %>
+          <%= link_to "Delete", flat_path(flat), method: "delete", confirm: "Are you sure?", class: "bold red" %>
         </div>
       </div>
       </li>

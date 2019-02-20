@@ -9,6 +9,27 @@
   margin-top: 10px;
 }
 
-.top-10 {
-  top: 200px;
+.overlay {
+  z-index: 2;
+  margin-top: -30px;
+}
+
+.background-slider {
+  width: 100%;
+  height: 330px;
+  background: url("https://picsum.photos/1600/900/?random");
+  background-style: cover;
+}
+
+.bold {
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.yellow {
+  color: orange;
+}
+
+.red {
+  color: red
 }

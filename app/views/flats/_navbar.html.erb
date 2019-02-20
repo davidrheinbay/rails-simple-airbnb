@@ -1,11 +1,17 @@
 <div class="navbar-lewagon">
-  <a href="#">
+  <%= link_to flats_path do %>
     <img src="https://cdn.freebiesupply.com/images/large/2x/airbnb-logo.png" class="brand">
-  </a>
+  <% end %>
 
   <!-- displayed on laptops -->
   <div class="navbar-lewagon-actions d-none d-sm-flex">
-    <div class="m-1 btn btn-outline-primary"><%= link_to "Add Flat", new_flat_path %></div>
+    <form action="/flats">
+      <input type="text" name="search" placeholder="Search for a place">
+      <input type="submit" value="Search" class="btn btn-outline-success ml-1">
+    </form>
+    <%= link_to new_flat_path do %>
+    <button class="btn btn-outline-primary ml-1">Add Flat</button>
+      <% end %>
   </div>
 
   <!-- displayed on phone / tablet -->
