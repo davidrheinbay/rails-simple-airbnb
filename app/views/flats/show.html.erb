@@ -1,0 +1,55 @@
+<%= render 'navbar' %>
+
+<div class="wrapper">
+  <img src="https://picsum.photos/1280/400/?random" class="img-fluid max-width:100% height:auto" alt="Map">
+   <div class="container">
+    <div class="row">
+      <div class="cards col-8">
+        <div class="card grey-background mt-1">
+          <div class="card-body">
+            <h2 class="card-title"><%= @flat.name %></h2>
+            <h5 class="card-subtitle"><%= @flat.address %></h5>
+          </div>
+        </div>
+        <div class="card grey-background mt-1">
+          <div class="card-body">
+            <h5 class="card-title">A bit more about...</h5>
+            <h6 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt animi laboriosam, libero veniam tempore neque, a ipsum quod nam ipsa.</h6>
+          </div>
+        </div>
+        <div class="card grey-background mt-1">
+          <div class="card-body">
+            <h5 class="card-title">Details</h5>
+            <div class="list-inline card-text">
+              <div class="list-inline-item"><i class="fas fa-users"></i></div>
+              <div class="list-inline-item card-text"><%= @flat.number_of_guests %></div>
+              <div class="list-inline-item"><i class="fas fa-euro-sign"></i></div>
+              <div class="list-inline-item card-text"><%= @flat.price_per_night %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form col-4 col-offset-6 mt-1">
+        <div class="card grey-background p-3">
+          <h5 class="card-title">Book this place!</h5>
+          <form action="">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend" >
+                <span class=input-group-text id="from">From:</span></div>
+                <input type="date" class=form-control placeholder="12/10/2017" aria-describedby="basic-addon1" aria-label="Username">
+              </div>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend" >
+                  <span class=input-group-text id="from">To:</span></div>
+                  <input type="date" class=form-control placeholder="12/10/2017" aria-describedby="basic-addon1" aria-label="Username">
+                </div>
+                <input type="submit" value="Book" class="btn btn-success col-12">
+              </form>
+            </div>
+          </div>
+        <%= link_to "Back to Flat Overview", flats_path %>
+        </div>
+
+      </div>
+    </div>
+  </div>

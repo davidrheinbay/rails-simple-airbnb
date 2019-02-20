@@ -1,0 +1,30 @@
+<%= render 'navbar' %>
+
+<div class="container">
+  <h1>All our Flats (<%= @flats.count %>)</h1>
+  <ul class="list-inline text-center">
+    <% @flats.each do |flat| %>
+      <li class="list-inline-item">
+      <div class="card margin-top" style="width: 18rem;">
+        <img src="https://picsum.photos/200/100/?random" alt="" class="card-img-top">
+        <div class="card-body grey-background">
+          <h5 class="card-title"><%= flat.name %></h1>
+          <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h3>
+          <div class="list-inline">
+            <div class="list-inline-item"><i class="fas fa-users"></i></div>
+            <div class="list-inline-item card-text"><%= flat.number_of_guests %></div>
+            <div class="list-inline-item"><i class="fas fa-euro-sign"></i></div>
+            <div class="list-inline-item card-text"><%= flat.price_per_night %></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <%= link_to "More Info", flat_path(flat) %>
+        </div>
+      </div>
+      </li>
+    <% end %>
+
+  </ul>
+
+</div>
+
